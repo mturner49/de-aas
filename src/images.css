@@ -1,0 +1,42 @@
+.excel {
+    background-image: url("./images/excel.jpeg");
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100px;
+}
+
+.snow {
+    background-image: url("./images/snow.jpeg");
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100px;
+}
+
+.custom {
+    background-image: url("./images/geears.jpeg");
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100px;
+}
+
+.mongo {
+    background-image: url("./images/mongo.jpeg");
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100px;
+}
+
+.python {
+    background-image: url("./images/python.png");
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100px;
+    
+}
+
+.oracle {
+    background-image: url("./images/oracle.png");
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100px;
+}
