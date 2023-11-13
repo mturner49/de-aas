@@ -2,20 +2,24 @@ import pandas as pd
 import json
 
 from bson import json_util
-from flask import Flask, render_template, request
+from flask import Blueprint, render_template, request
 from werkzeug.utils import secure_filename
-from db.mongodb import Mongo
-from settings import MONGODB_CONN_STR
-app = Flask(__name__)
+from flaskr.db.mongodb import Mongo
+from flaskr.settings import MONGODB_CONN_STR
+
+server = Blueprint('server', __name__)
 
 
+@server.route('/')
+def index():
+    return render_template('index.html')
 
-@app.route('/upload')
+@server.route('/upload')
 def upload():
    return render_template('upload_file.html')
 
 
-@app.route('/upload_file', methods = ['GET','POST'])
+@server.route('/upload_file', methods = ['GET','POST'])
 def upload_file():
     if request.method == 'POST':
         f = request.files['file']
@@ -30,6 +34,5 @@ def upload_file():
         return payload
 
 
-
-if __name__ == '__main__':
-   app.run(debug = True)
+# if __name__ == '__main__':
+#    app.run(debug = True)
