@@ -4,7 +4,7 @@ import json
 from bson import json_util
 from flask import Blueprint, render_template, request
 from werkzeug.utils import secure_filename
-from flaskr.db.mongodb import Mongo
+from flaskr.database.mongodb import Mongo
 from flaskr.settings import MONGODB_CONN_STR
 
 server = Blueprint('server', __name__)
